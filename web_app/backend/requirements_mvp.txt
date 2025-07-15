@@ -1,0 +1,32 @@
+# ULTRA-MINIMAL MVP FOR RAILWAY (Under 4GB)
+# Core Web Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+
+# Database - Essential
+sqlalchemy==2.0.23
+alembic==1.12.1
+psycopg2-binary==2.9.9
+
+# Auth & Security - Core
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+
+# Basic PDF - MINIMAL
+PyMuPDF==1.23.26
+
+# Config
+python-dotenv==1.0.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# HTTP
+httpx==0.25.2
+requests==2.31.0
+
+# Payments - Essential
+stripe==7.8.0
+
+# Utils - Minimal
+python-dateutil==2.8.2

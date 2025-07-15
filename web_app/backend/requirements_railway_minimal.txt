@@ -1,0 +1,43 @@
+# MINIMAL REQUIREMENTS FOR RAILWAY DEPLOYMENT
+# Web Framework
+fastapi>=0.104.1
+uvicorn[standard]>=0.24.0
+
+# Database
+sqlalchemy>=2.0.23
+alembic>=1.12.1
+psycopg2-binary>=2.9.0
+
+# Authentication & Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+
+# Background Tasks
+celery==5.3.4
+redis==5.0.1
+
+# Essential PDF Processing ONLY
+PyMuPDF>=1.24.0
+pandas>=2.1.4
+Pillow>=10.0.0
+openpyxl>=3.1.0
+
+# Email
+python-dotenv>=1.0.0
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+
+# HTTP Client
+httpx>=0.25.0
+requests>=2.31.0
+
+# Email service
+sendgrid>=6.11.0
+
+# Stripe payments
+stripe>=7.8.0
+
+# Utils
+python-dateutil>=2.8.2
+pytz>=2023.3
