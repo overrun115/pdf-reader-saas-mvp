@@ -1,3 +1,4 @@
+# MINIMAL REQUIREMENTS FOR RAILWAY DEPLOYMENT
 # Web Framework
 fastapi>=0.104.1
 uvicorn[standard]>=0.24.0
@@ -16,218 +17,27 @@ python-multipart==0.0.6
 celery==5.3.4
 redis==5.0.1
 
-# PDF Processing (from existing code)
-docling>=2.0.0
-pandas>=2.1.4
-pytesseract>=0.3.10
-Pillow>=10.0.0
-opencv-python>=4.8.0
-openpyxl>=3.1.0
+# Essential PDF Processing ONLY
 PyMuPDF>=1.24.0
-
-# Advanced OCR (Free Premium Stack)
-paddleocr>=2.7.3
-python-doctr[torch]>=0.7.0
-
-# Enhanced PDF Conversion (Free)
-pdf2docx>=0.5.6
-pdfplumber>=0.10.3
-markitdown
-pymupdf4llm>=0.0.5
-
-# Advanced Document Analysis Stack (2024)
-unstructured[all-docs]>=0.15.0
-marker-pdf>=0.3.2
-detectron2
-
-# Layout Detection (Free)
-layoutparser[layoutmodels]>=0.3.4
-
-# Office Integration
-unoconv>=0.9.0
-libreoffice-python
-
-# IA Integration (Free)
-langchain-community>=0.0.13
-llama-index>=0.9.48
-
-# File handling
-aiofiles==23.2.1
-python-magic==0.4.27
-python-docx>=1.1.2
-
-# Environment & Configuration
-python-dotenv==1.0.0
-pydantic>=2.5.0
-pydantic-settings>=2.3.0
-
-# HTTP Client (for external APIs)
-httpx==0.25.2
-
-# Payment Processing
-stripe>=7.0.0
-
-# Email Services
-sendgrid>=6.10.0
-jinja2>=3.1.0
-
-# Validation & Serialization
-email-validator==2.1.0
-
-# Development & Testing
-pytest==7.4.3
-pytest-asyncio==0.21.1
-
-# NUEVAS DEPENDENCIAS PARA INTELIGENCIA DOCUMENTAL
-
-# OCR Avanzado - Múltiples Engines
-easyocr>=1.7.0
-tesseract>=0.1.3
-
-# NLP y Análisis de Texto
-spacy>=3.7.0
-nltk>=3.8.1
-langdetect>=1.0.9
-textblob>=0.17.1
-
-# Análisis de Layout Avanzado
-detectron2
-layout-model>=0.0.4
-
-# Análisis de Documentos Word
-python-docx2txt>=0.8
-docx2python>=2.0.1
-
-# Análisis de Excel Avanzado
-xlrd>=2.0.1
-xlwings>=0.30.0
+pandas>=2.1.4
+Pillow>=10.0.0
 openpyxl>=3.1.0
 
-# Validación y Verificación de Datos
-cerberus>=1.3.4
-jsonschema>=4.17.0
+# Email
+python-dotenv>=1.0.0
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
 
-# Machine Learning para Clasificación
-scikit-learn>=1.3.0
-transformers>=4.30.0
-
-# Workflows y Automatización
-celery-workflows>=0.1.0
-
-# Análisis Semántico y Embeddings
-sentence-transformers>=2.2.2
-faiss-cpu>=1.7.4
-
-# Detección de Idiomas Avanzada
-polyglot>=16.7.4
-
-# Logging Avanzado
-structlog>=23.1.0
-
-# FASE 3: IA AVANZADA Y CAPACIDADES PREDICTIVAS
-
-# Machine Learning Avanzado
-pandas>=2.0.3
-numpy>=1.24.3
-scipy>=1.11.0
-
-# Análisis de Redes y Grafos
-networkx>=3.1
-
-# Análisis de Texto y Legibilidad
-textstat>=0.7.3
-
-# Análisis de Series Temporales
-statsmodels>=0.14.0
-
-# Análisis Predictivo Avanzado
-prophet>=1.1.4
-
-# Visualización de Datos (para análisis)
-plotly>=5.15.0
-seaborn>=0.12.2
-matplotlib>=3.7.0
-
-# Procesamiento de Datos Adicional
-featuretools>=1.27.0
-tsfresh>=0.20.0
-
-# Optimización y Modelado
-optuna>=3.3.0
-hyperopt>=0.2.7
-
-# FASE 4: INTEGRACIONES EMPRESARIALES Y ECOSISTEMA
-
-# Clientes HTTP Avanzados
-aiohttp>=3.9.0
+# HTTP Client
+httpx>=0.25.0
 requests>=2.31.0
 
-# Encriptación y Seguridad Empresarial
-cryptography>=41.0.0
-pyjwt>=2.8.0
+# Email service
+sendgrid>=6.11.0
 
-# Integración con Cloud Providers
-boto3>=1.34.0
-azure-storage-blob>=12.19.0
-google-cloud-storage>=2.10.0
+# Stripe payments
+stripe>=7.8.0
 
-# Integración Office y Productividad
-python-docx>=1.1.0
-mammoth>=1.6.0
-
-# Base de Datos Avanzada
-duckdb>=0.9.0
-pyarrow>=14.0.0
-
-# Autenticación OAuth y SSO
-authlib>=1.2.1
-python-oauth2>=1.1.1
-
-# Monitoreo y Observabilidad
-opentelemetry-api>=1.21.0
-opentelemetry-sdk>=1.21.0
-
-# Rate Limiting y Cache
-slowapi>=0.1.9
-cachetools>=5.3.0
-
-# Validación y Sanitización
-bleach>=6.1.0
+# Utils
 python-dateutil>=2.8.2
-
-# Webhooks y Event Processing
-pydantic-webhook>=0.1.0
-
-# APIs y Conectores Específicos
-# Salesforce
-simple-salesforce>=1.12.0
-
-# Microsoft Graph
-msgraph-core>=1.0.0
-
-# Google APIs
-google-api-python-client>=2.108.0
-google-auth>=2.23.0
-
-# Slack
-slack-sdk>=3.23.0
-
-# Dropbox
-dropbox>=11.36.0
-
-# Data Processing y ETL
-great-expectations>=0.18.0
-apache-airflow>=2.7.0
-
-# Logging Empresarial
-python-json-logger>=2.0.0
-
-# XML Processing (para integraciones ERP)
-lxml>=4.9.0
-xmltodict>=0.13.0
-
-# Análisis de Compliance
-bandit>=1.7.5
-
-# Feature Flags
-flipper-client>=0.1.0
+pytz>=2023.3
