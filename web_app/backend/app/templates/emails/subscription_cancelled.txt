@@ -1,0 +1,38 @@
+PDF Extractor - Subscription Cancelled
+
+Hi {{ user_name }},
+
+We're sorry to see you go. Your {{ plan_name }} plan subscription has been cancelled.
+
+CANCELLATION DETAILS:
+- Plan: {{ plan_name }}
+- Cancelled on: {{ cancellation_date }}
+{% if access_until %}- Access continues until: {{ access_until }}{% endif %}
+
+WHAT HAPPENS NOW:
+{% if access_until %}• You can continue using PDF Extractor until {{ access_until }}
+• After this date, your account will revert to the free tier{% else %}• Your account has been downgraded to the free tier{% endif %}
+• All your previous extractions and data remain accessible
+• You can reactivate your subscription at any time
+• We'll keep your account and settings for future use
+
+HELP US IMPROVE:
+We'd love to know what led to your cancellation. Your feedback helps us improve PDF Extractor for everyone.
+Share feedback: {{ feedback_url }}
+
+CHANGED YOUR MIND?
+You can reactivate your subscription anytime from your dashboard.
+Reactivate: {{ reactivate_url }}
+
+QUICK LINKS:
+• Dashboard: {{ dashboard_url }}
+• Reactivate Subscription: {{ reactivate_url }}
+• Support: mailto:{{ support_email }}
+
+Thank you for being part of the PDF Extractor community.
+
+Questions? Contact us at {{ support_email }}
+
+---
+PDF Extractor Team
+© 2025 PDF Extractor. All rights reserved.

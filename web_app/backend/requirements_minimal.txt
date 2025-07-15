@@ -1,0 +1,91 @@
+# Web Framework
+fastapi>=0.104.1
+uvicorn[standard]>=0.24.0
+
+# Database
+sqlalchemy>=2.0.23
+alembic>=1.12.1
+psycopg2-binary>=2.9.0
+
+# Authentication & Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+
+# Background Tasks
+celery==5.3.4
+redis==5.0.1
+
+# PDF Processing (Core only)
+pandas>=2.1.4
+pytesseract>=0.3.10
+Pillow>=10.0.0
+opencv-python>=4.8.0
+openpyxl>=3.1.0
+PyMuPDF>=1.24.0
+
+# Basic OCR
+easyocr>=1.7.0
+
+# NLP Basic
+spacy>=3.7.0
+nltk>=3.8.1
+langdetect>=1.0.9
+textblob>=0.17.1
+
+# File handling
+aiofiles==23.2.1
+python-magic==0.4.27
+python-docx>=1.1.2
+
+# Environment & Configuration
+python-dotenv==1.0.0
+pydantic>=2.5.0
+pydantic-settings>=2.3.0
+
+# HTTP Client
+httpx==0.25.2
+
+# Payment Processing
+stripe>=7.0.0
+
+# Email Services
+sendgrid>=6.10.0
+jinja2>=3.1.0
+
+# Validation
+email-validator==2.1.0
+
+# Development
+pytest==7.4.3
+pytest-asyncio==0.21.1
+
+# Machine Learning Basic
+scikit-learn>=1.3.0
+numpy>=1.24.3
+
+# Security
+cryptography>=41.0.0
+pyjwt>=2.8.0
+
+# Cloud Storage
+boto3>=1.34.0
+
+# Rate Limiting
+slowapi>=0.1.9
+
+# APIs and Connectors Basic
+simple-salesforce>=1.12.0
+
+# Document validation
+cerberus>=1.3.4
+jsonschema>=4.17.0
+
+# Additional dependencies for intelligence services
+textstat>=0.7.3
+mammoth>=1.6.0
+docx2python>=2.0.1
+docx2txt>=0.8
+
+# Advanced PDF processing
+docling>=2.0.0

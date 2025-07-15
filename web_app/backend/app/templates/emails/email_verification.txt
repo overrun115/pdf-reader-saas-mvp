@@ -1,0 +1,26 @@
+Welcome to PDF Extractor!
+
+Hi {{ user_name }},
+
+Thank you for signing up for PDF Extractor! We're excited to have you on board.
+
+To complete your registration and start extracting tables from your PDFs, please verify your email address by clicking the link below:
+
+{{ verification_url }}
+
+IMPORTANT: This verification link will expire in 24 hours. If you don't verify your email within this time, you'll need to request a new verification link.
+
+What's Next?
+✓ Verify your email - Click the link above to activate your account
+✓ Upload your first PDF - Drag and drop or browse to select your file
+✓ Extract tables instantly - Our AI will automatically detect and extract tables
+✓ Download results - Get your data in Excel, CSV, or both formats
+
+If you didn't create an account with PDF Extractor, you can safely ignore this email.
+
+Need help? Visit our FAQ page ({{ frontend_url }}/faq) or contact our support team ({{ frontend_url }}/contact).
+
+Best regards,
+The PDF Extractor Team
+
+© 2025 PDF Extractor. All rights reserved.

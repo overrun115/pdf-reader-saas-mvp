@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Extract tables from PDF files with intelligent column mapping and multiple output formats. Fast, accurate, and affordable PDF table extraction SaaS."
+    />
+    <meta name="keywords" content="PDF, table extraction, data extraction, convert PDF to Excel, PDF to CSV, SaaS" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pdfextractor.com/">
+    <meta property="og:title" content="PDF Table Extractor - Extract Tables from PDFs with AI">
+    <meta property="og:description" content="Extract tables from PDF files with intelligent column mapping. 10x cheaper than competitors, with superior accuracy and features.">
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://pdfextractor.com/">
+    <meta property="twitter:title" content="PDF Table Extractor - Extract Tables from PDFs with AI">
+    <meta property="twitter:description" content="Extract tables from PDF files with intelligent column mapping. 10x cheaper than competitors, with superior accuracy and features.">
+    <meta property="twitter:image" content="%PUBLIC_URL%/og-image.png">
+    
+    <title>PDF Table Extractor - Extract Tables from PDFs with AI</title>
+    
+    <style>
+      body {
+        font-family: 'Montserrat', 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #FFFFFF;
+        min-height: 100vh;
+      }
+      
+      .loading-screen {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #FFFFFF;
+        color: #1a202c;
+        font-size: 18px;
+        flex-direction: column;
+        font-family: 'Montserrat', sans-serif;
+      }
+      
+      .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 4px solid rgba(0, 102, 255, 0.2);
+        border-top: 4px solid #0066FF;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-bottom: 20px;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="loading-screen">
+        <div class="loading-spinner"></div>
+        <div>Loading PDF Table Extractor...</div>
+      </div>
+    </div>
+  </body>
+</html>

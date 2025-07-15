@@ -1,0 +1,16 @@
+Proveedor,Fecha,Numero_Factura,Monto,Estado,Categoria
+Proveedor A,2025-01-15,F001,1250.00,Pendiente,Oficina
+Proveedor B,2025-01-16,F002,850.50,Pagado,Servicios
+Proveedor C,2025-01-17,F003,2100.00,Pendiente,Equipos
+Proveedor A,2025-01-18,F004,450.00,Pagado,Oficina
+Proveedor D,2025-01-20,F005,3200.00,Pendiente,Servicios
+Proveedor B,2025-01-22,F006,750.00,Pagado,Oficina
+Proveedor E,2025-01-25,F007,1800.00,Pendiente,Equipos
+Proveedor C,2025-01-26,F008,950.00,Pagado,Servicios
+Proveedor F,2025-01-28,F009,4500.00,Pendiente,Equipos
+Proveedor A,2025-01-30,F010,680.00,Pagado,Oficina
+Proveedor G,2025-02-01,F011,2250.00,Pendiente,Servicios
+Proveedor B,2025-02-03,F012,1100.00,Pagado,Oficina
+Proveedor H,2025-02-05,F013,3750.00,Pendiente,Equipos
+Proveedor D,2025-02-07,F014,820.00,Pagado,Servicios
+Proveedor I,2025-02-10,F015,5200.00,Pendiente,Equipos

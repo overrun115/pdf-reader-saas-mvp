@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Failed - PDF Extractor</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #0c0c15;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 40px;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: #0c0c15;
+            margin-bottom: 10px;
+        }
+        .warning-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #ef4444;
+        }
+        h1 {
+            color: #0c0c15;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        .payment-details {
+            background-color: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-left: 4px solid #ef4444;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        .payment-details strong {
+            color: #0c0c15;
+        }
+        .amount {
+            font-size: 24px;
+            font-weight: 600;
+            color: #0c0c15;
+            margin: 10px 0;
+        }
+        .retry-info {
+            background-color: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-left: 4px solid #f59e0b;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        .retry-info strong {
+            color: #0c0c15;
+        }
+        .common-issues {
+            background-color: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        .common-issues h3 {
+            color: #0c0c15;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .common-issues ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #64748b;
+        }
+        .common-issues li {
+            margin-bottom: 8px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #0c0c15;
+            color: #ffffff;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            margin: 10px;
+            text-align: center;
+            transition: all 0.15s ease-in-out;
+        }
+        .cta-button:hover {
+            background-color: #000000;
+        }
+        .primary-button {
+            background-color: #ef4444;
+        }
+        .primary-button:hover {
+            background-color: #dc2626;
+        }
+        .secondary-button {
+            background-color: #64748b;
+        }
+        .secondary-button:hover {
+            background-color: #475569;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+            font-size: 14px;
+            color: #64748b;
+            text-align: center;
+        }
+        .access-note {
+            background-color: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-left: 4px solid #22c55e;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .access-note strong {
+            color: #0c0c15;
+        }
+        a {
+            color: #0c0c15;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            .header {
+                margin-bottom: 20px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            .amount {
+                font-size: 20px;
+            }
+            .cta-button {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">📊 PDF Extractor</div>
+            <div class="warning-icon">⚠️</div>
+            <h1>Payment Failed</h1>
+            <p>Hi {{ user_name }}, we couldn't process your payment.</p>
+        </div>
+
+        <div class="payment-details">
+            <strong>Payment Details:</strong>
+            <div class="amount">${{ "%.2f"|format(amount) }}</div>
+            <p style="color: #64748b; margin: 10px 0;">{{ plan_name }} Plan - {{ billing_period }}</p>
+            <p style="color: #64748b; margin: 10px 0;"><strong>Attempted:</strong> {{ attempt_date }}</p>
+            {% if failure_reason %}
+            <p style="color: #64748b; margin: 10px 0;"><strong>Reason:</strong> {{ failure_reason }}</p>
+            {% endif %}
+        </div>
+
+        <div class="retry-info">
+            <strong>🔄 What happens next?</strong>
+            <ul style="margin: 15px 0; padding-left: 20px; color: #64748b;">
+                <li>We'll automatically retry the payment in {{ retry_days }} days</li>
+                <li>You'll receive an email notification before each retry attempt</li>
+                <li>If payment fails {{ max_retries }} times, your subscription will be cancelled</li>
+                <li>You can update your payment method anytime to avoid interruption</li>
+            </ul>
+        </div>
+
+        <div class="access-note">
+            <strong>✅ Good news:</strong> Your access to PDF Extractor continues while we resolve this payment issue. 
+            You can keep using all your plan features without interruption.
+        </div>
+
+        <div style="text-align: center;">
+            <a href="{{ update_payment_url }}" class="cta-button primary-button">Update Payment Method</a>
+            <a href="{{ retry_payment_url }}" class="cta-button">Retry Payment Now</a>
+        </div>
+
+        <div class="common-issues">
+            <h3>💡 Common payment issues:</h3>
+            <ul>
+                <li><strong>Expired card:</strong> Check if your credit/debit card has expired</li>
+                <li><strong>Insufficient funds:</strong> Ensure your account has enough balance</li>
+                <li><strong>Bank restrictions:</strong> Some banks block online transactions by default</li>
+                <li><strong>Billing address:</strong> Verify your billing address matches your card</li>
+                <li><strong>Card limits:</strong> Check if you've reached your daily/monthly spending limit</li>
+                <li><strong>3D Secure:</strong> Complete any required authentication steps</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="{{ dashboard_url }}" class="cta-button secondary-button">Go to Dashboard</a>
+            <a href="{{ billing_url }}" class="cta-button secondary-button">Manage Billing</a>
+        </div>
+
+        <div class="footer">
+            <p>
+                Need help resolving this payment issue?<br>
+                Our support team is here to help: <a href="mailto:{{ support_email }}">{{ support_email }}</a>
+            </p>
+            <p>
+                <a href="{{ dashboard_url }}">Dashboard</a> | 
+                <a href="{{ update_payment_url }}">Update Payment</a> |
+                <a href="mailto:{{ support_email }}">Support</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

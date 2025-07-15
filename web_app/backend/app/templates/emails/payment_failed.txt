@@ -1,0 +1,45 @@
+PDF Extractor - Payment Failed
+
+Hi {{ user_name }},
+
+We couldn't process your payment for your PDF Extractor subscription.
+
+PAYMENT DETAILS:
+• Amount: ${{ "%.2f"|format(amount) }}
+• Plan: {{ plan_name }} - {{ billing_period }}
+• Attempted: {{ attempt_date }}
+{% if failure_reason %}• Reason: {{ failure_reason }}{% endif %}
+
+WHAT HAPPENS NEXT:
+• We'll automatically retry the payment in {{ retry_days }} days
+• You'll receive an email notification before each retry attempt
+• If payment fails {{ max_retries }} times, your subscription will be cancelled
+• You can update your payment method anytime to avoid interruption
+
+GOOD NEWS:
+Your access to PDF Extractor continues while we resolve this payment issue. You can keep using all your plan features without interruption.
+
+ACTION REQUIRED:
+1. Update Payment Method: {{ update_payment_url }}
+2. Or retry payment now: {{ retry_payment_url }}
+
+COMMON PAYMENT ISSUES:
+• Expired card: Check if your credit/debit card has expired
+• Insufficient funds: Ensure your account has enough balance
+• Bank restrictions: Some banks block online transactions by default
+• Billing address: Verify your billing address matches your card
+• Card limits: Check if you've reached your daily/monthly spending limit
+• 3D Secure: Complete any required authentication steps
+
+QUICK LINKS:
+• Dashboard: {{ dashboard_url }}
+• Update Payment: {{ update_payment_url }}
+• Manage Billing: {{ billing_url }}
+• Support: mailto:{{ support_email }}
+
+Need help resolving this payment issue?
+Our support team is here to help: {{ support_email }}
+
+---
+PDF Extractor Team
+© 2025 PDF Extractor. All rights reserved.

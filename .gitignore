@@ -1,0 +1,82 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+venv/
+env/
+ENV/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.eslintcache
+
+# Build outputs
+web_app/frontend/build/
+web_app/frontend/.next/
+dist/
+
+# Environment files (keep templates)
+.env
+*.env
+\!.env.example
+\!.env.production
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# Cache and large files
+.cache/
+*.cache
+**/.cache/
+**/node_modules/.cache/
+**/*.pack
+**/*.dylib
+**/torch/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Uploads and temp files
+uploads/
+temp/
+exports/
+test_uploads/
+test_exports/
+
+# Development files
+debug_*
+test_*
+*_backup.py
+*_minimal.py
+*_simple.py
+*_working.py
+
+# Documentation (keep main ones)
+*.docx
+\!README.md
+\!DEPLOYMENT_GUIDE.md
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+EOF < /dev/null

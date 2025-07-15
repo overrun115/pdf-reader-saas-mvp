@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Your Email - PDF Extractor</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #0c0c15;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            padding: 20px;
+        }
+        .header {
+            background-color: #ffffff;
+            color: #0c0c15;
+            padding: 30px 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .header .subtitle {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #64748b;
+        }
+        .logo {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .content {
+            padding: 30px 0;
+        }
+        .content h2 {
+            color: #0c0c15;
+            margin-top: 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .content p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #64748b;
+        }
+        .verify-button {
+            background-color: #0c0c15;
+            color: #ffffff;
+            padding: 16px 32px;
+            text-decoration: none;
+            border-radius: 8px;
+            display: inline-block;
+            font-weight: 500;
+            font-size: 16px;
+            margin: 20px 0;
+            transition: all 0.15s ease-in-out;
+            border: none;
+        }
+        .verify-button:hover {
+            background-color: #000000;
+        }
+        .link-box {
+            background-color: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 8px;
+            padding: 16px;
+            margin: 20px 0;
+            word-break: break-all;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 14px;
+            color: #64748b;
+        }
+        .warning {
+            background-color: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-left: 4px solid #0c0c15;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 20px 0;
+            color: #64748b;
+        }
+        .warning strong {
+            color: #0c0c15;
+        }
+        .features {
+            margin: 30px 0;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            padding: 12px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        .feature-icon {
+            font-size: 24px;
+            margin-right: 15px;
+            min-width: 40px;
+        }
+        .feature-text {
+            flex: 1;
+            color: #64748b;
+        }
+        .feature-text strong {
+            color: #0c0c15;
+        }
+        .footer {
+            background-color: #ffffff;
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        .footer p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #64748b;
+        }
+        .footer .company-name {
+            font-weight: 600;
+            color: #0c0c15;
+        }
+        .divider {
+            height: 1px;
+            background-color: rgba(0, 0, 0, 0.06);
+            margin: 30px 0;
+        }
+        a {
+            color: #0c0c15;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .container {
+                margin: 0;
+                border-radius: 0;
+                padding: 15px;
+            }
+            .header {
+                padding: 20px 0;
+            }
+            .content {
+                padding: 20px 0;
+            }
+            .footer {
+                padding: 20px 0;
+            }
+            .verify-button {
+                padding: 14px 28px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">📄</div>
+            <h1>Welcome to PDF Extractor!</h1>
+            <div class="subtitle">Verify your email to get started</div>
+        </div>
+        
+        <div class="content">
+            <h2>Hello {{ user_name }}!</h2>
+            
+            <p>Thank you for signing up for PDF Extractor! We're excited to have you on board.</p>
+            
+            <p>To complete your registration and start extracting tables from your PDFs, please verify your email address by clicking the button below:</p>
+            
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="{{ verification_url }}" class="verify-button">Verify Email Address</a>
+            </div>
+            
+            <p>If the button doesn't work, you can also copy and paste this link into your browser:</p>
+            <div class="link-box">{{ verification_url }}</div>
+            
+            <div class="warning">
+                <strong>⚠️ Important:</strong> This verification link will expire in 24 hours. If you don't verify your email within this time, you'll need to request a new verification link.
+            </div>
+            
+            <div class="divider"></div>
+            
+            <h3>🚀 What's Next?</h3>
+            <div class="features">
+                <div class="feature-item">
+                    <div class="feature-icon">✅</div>
+                    <div class="feature-text">
+                        <strong>Verify your email</strong> - Click the button above to activate your account
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📤</div>
+                    <div class="feature-text">
+                        <strong>Upload your first PDF</strong> - Drag and drop or browse to select your file
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-text">
+                        <strong>Extract tables instantly</strong> - Our AI will detect and extract tables automatically
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⬇️</div>
+                    <div class="feature-text">
+                        <strong>Download results</strong> - Get your data in Excel, CSV or both formats
+                    </div>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <p>If you didn't create an account with PDF Extractor, you can safely ignore this email.</p>
+            
+            <p>Need help? Visit our <a href="{{ frontend_url }}/faq">FAQ page</a> or <a href="{{ frontend_url }}/contact">contact our support team</a>.</p>
+        </div>
+        
+        <div class="footer">
+            <p>Best regards,</p>
+            <p class="company-name">The PDF Extractor Team</p>
+            <p>© 2025 PDF Extractor. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

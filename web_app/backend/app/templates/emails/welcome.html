@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to PDF Extractor</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #0c0c15;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 40px;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: #0c0c15;
+            margin-bottom: 10px;
+        }
+        .welcome-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #0c0c15;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        .tier-badge {
+            background-color: #0c0c15;
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: none;
+            display: inline-block;
+            margin: 15px 0;
+        }
+        .features {
+            background-color: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        .features h3 {
+            color: #0c0c15;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .features ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .features li {
+            margin-bottom: 8px;
+            color: #64748b;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #0c0c15;
+            color: #ffffff;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            margin: 20px 0;
+            text-align: center;
+            transition: all 0.15s ease-in-out;
+        }
+        .cta-button:hover {
+            background-color: #000000;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+            font-size: 14px;
+            color: #64748b;
+            text-align: center;
+        }
+        .support-info {
+            background-color: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-left: 4px solid #0c0c15;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .support-info strong {
+            color: #0c0c15;
+        }
+        .quick-start {
+            background-color: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        .quick-start h4 {
+            margin-top: 0;
+            color: #0c0c15;
+            font-weight: 600;
+        }
+        .quick-start ol {
+            color: #64748b;
+            margin: 0;
+            padding-left: 20px;
+        }
+        .quick-start li {
+            margin-bottom: 8px;
+        }
+        a {
+            color: #0c0c15;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            .header {
+                margin-bottom: 20px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">📊 PDF Extractor</div>
+            <div class="welcome-icon">🎉</div>
+            <h1>Welcome, {{ user_name }}!</h1>
+            <p>Thank you for joining PDF Extractor. We're excited to help you extract tables from your PDF files with ease!</p>
+            <span class="tier-badge">{{ tier }} Plan</span>
+        </div>
+
+        <div class="features">
+            <h3>What you can do with PDF Extractor:</h3>
+            <ul>
+                <li>Extract tables from PDF files automatically</li>
+                <li>Export data to CSV and Excel formats</li>
+                <li>Process multiple files efficiently</li>
+                <li>Access our powerful API for integrations</li>
+                <li>Get priority support when you need help</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="{{ dashboard_url }}" class="cta-button">Get Started - Go to Dashboard</a>
+        </div>
+
+        <div class="support-info">
+            <strong>Need Help?</strong><br>
+            Our support team is here to help you get the most out of PDF Extractor. 
+            If you have any questions, don't hesitate to reach out to us at 
+            <a href="mailto:{{ support_email }}">{{ support_email }}</a>
+        </div>
+
+        <div class="quick-start">
+            <h4>Quick Start Tips:</h4>
+            <ol>
+                <li>Upload your first PDF file from the dashboard</li>
+                <li>Wait for our AI to process and extract tables</li>
+                <li>Download your data in CSV or Excel format</li>
+                <li>Explore our API documentation for advanced integrations</li>
+            </ol>
+        </div>
+
+        <div class="footer">
+            <p>
+                This email was sent to <strong>{{ user_email }}</strong><br>
+                PDF Extractor - Intelligent Table Extraction from PDFs
+            </p>
+            <p>
+                <a href="{{ dashboard_url }}">Dashboard</a> | 
+                <a href="mailto:{{ support_email }}">Support</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
